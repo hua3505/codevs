@@ -1,0 +1,4 @@
+做完后总感觉解题的方法很糟糕，于是到网上搜了一下，发现一个很简单的解法
+允许出现负数，一下就简单了
+
+http://blog.csdn.net/maverick1990/article/details/17262243
