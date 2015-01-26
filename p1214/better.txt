@@ -1,0 +1,3 @@
+更好的解法，先把线段排序，要简洁很多
+
+http://blog.csdn.net/maverick1990/article/details/17262495

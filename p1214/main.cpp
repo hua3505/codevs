@@ -3,6 +3,10 @@
 题目:p1214 线段覆盖
 */
 
+/*
+遇到的最大的坑，没有考虑两个线段完全重合的情况，还有就是我的方法好像走了写弯路，比较好的思路是按起点排序，终点作为第二关键字，再比较
+*/
+
 #include <iostream>
 #include <algorithm>
 
@@ -11,7 +15,8 @@ using namespace std;
 bool IsCross(int s1, int t1, int s2, int t2)
 {
     if ((s1 > s2 && s1 < t2) || (t1 > s2 && t1 < t2)
-        || (s2 > s1 && s2 < t1) || (t2 > s1 && t2 < t1))
+        || (s2 > s1 && s2 < t1) || (t2 > s1 && t2 < t1)
+        || (s1 == s2 && t1 == t2))
     {
         return true;
     }
@@ -94,6 +99,10 @@ int main()
     while (nTotalCross > 0)
     {
         int nCrossNum = GetMaxCross(&lineCross[0], n);
+        if (nCrossNum <= 0)
+        {
+            break;
+        }
         nLeftLineNum -= 1;
         nTotalCross -= nCrossNum;
     }
